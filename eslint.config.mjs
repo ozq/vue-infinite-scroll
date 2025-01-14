@@ -6,7 +6,7 @@ import eslintrcAutoImport from "./.eslintrc-auto-import.json" with { type: "json
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    ignores: ["dist/**"],
+    ignores: ["dist/**", "docs/**"],
   },
   {
     files: ["src/**/*.{js,mjs,cjs,vue}"],
