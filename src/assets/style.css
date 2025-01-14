@@ -1,0 +1,11 @@
+@import './variables.css';
+
+html, body {
+  font-family: sans-serif;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-secondary);
+}
