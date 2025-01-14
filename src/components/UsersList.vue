@@ -13,9 +13,11 @@ let page = ref(0);
 let isLoading = ref(false);
 
 const fetchUsers = async () => {
+  if (isLoading.value) return;
   try {
     isLoading.value = true;
     const result = await UserApi.fetchAll({ page: page.value, size: pageSize });
+    if (result.length === 0) return;
     users.value.push(...result);
     page.value++;
   } catch (error) {
