@@ -1,5 +1,8 @@
 # Yet another infinite scroll 🪄
 
+## Demo
+https://spiffy-conkies-4eabdc.netlify.app/
+
 ## Requirements
 Node: 20.18.1  
 Yarn: 4.5.3
