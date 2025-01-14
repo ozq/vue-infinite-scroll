@@ -8,6 +8,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  isMuted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emits = defineEmits(['end-reached']);
@@ -17,6 +21,7 @@ let observer;
 
 const startObserver = () => {
   observer = new IntersectionObserver((entries) => {
+    if (props.isMuted) return;
     const entry = entries[0];
     if (entry.isIntersecting) {
       emits('end-reached');
